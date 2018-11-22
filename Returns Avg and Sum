@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+	double sum = 0;
+	double count = 1;
+	double avg;
+	double number;
+	
+
+	printf("Enter a number: ");
+	scanf_s("%lf", &number);
+
+
+	while (number != 9999)
+	{
+		sum = sum + number;
+		avg = sum / count;
+		count++;
+		
+		printf("Enter a number: ");
+		scanf_s("%lf", &number);
+	}
+	count--;
+	printf("The average of the numbers is: %.2lf\n", avg);
+	printf("The sum of the numbers is: %.2lf\n", sum);
+	printf("%.2lf numbers were counted\n", count);
+
+	system("PAUSE");
+	return 0;
+}
